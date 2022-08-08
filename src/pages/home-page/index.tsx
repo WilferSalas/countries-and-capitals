@@ -31,7 +31,8 @@ const HomePage: FC = () => {
   useEffect(() => {
     if (selectedValues.length === 2) {
       const country = Object
-        .keys(data).find((key) => data[key] === selectedValues[0]) || selectedValues[0];
+        .keys(data)
+        .find((key) => data[key] === selectedValues[0]) || selectedValues[0];
       const city = data[selectedValues[1]] || selectedValues[1];
 
       if (data[country] === city) {
